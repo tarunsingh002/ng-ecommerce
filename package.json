@@ -1,5 +1,5 @@
 {
-  "name": "first-app",
+  "name": "ng-ecommerce-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
