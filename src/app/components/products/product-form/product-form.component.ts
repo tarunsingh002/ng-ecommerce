@@ -1,10 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, NgForm, Validators } from "@angular/forms";
-import { Product } from "../product.model";
-import { ProductService } from "../product.service";
-import { ProductDataService } from "../product-data.service";
+import { Product } from "../../../models/product.model";
+import { ProductService } from "../../../services/product.service";
+import { ProductDataService } from "../../../services/product-data.service";
 import { ActivatedRoute, Params, Router } from "@angular/router";
-import { LoadingService } from "../loading.service";
+import { LoadingService } from "../../../services/loading.service";
 
 @Component({
   selector: "app-product-form",

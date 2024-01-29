@@ -1,15 +1,15 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
-import { ProductService } from "../product.service";
-import { Product } from "../product.model";
+import { ProductService } from "../../../services/product.service";
+import { Product } from "../../../models/product.model";
 import { NgForm } from "@angular/forms";
-import { UserService } from "../auth/user.service";
-import { AuthService } from "../auth/auth.service";
+import { UserService } from "../../../services/auth-services/user.service";
+import { AuthService } from "../../../services/auth-services/auth.service";
 
-import { User } from "../auth/user.model";
+import { User } from "../../../models/user.model";
 import { Subscription } from "rxjs";
-import { LoadingService } from "../loading.service";
-import { Cart } from "../cart-page/cart.model";
+import { LoadingService } from "../../../services/loading.service";
+import { Cart } from "../../../models/cart.model";
 import { CartPageService } from "../cart-page/cart-page.service";
 
 @Component({

@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, throwError } from "rxjs";
-import { User } from "./user.model";
+import { User } from "../../models/user.model";
 import { catchError, tap } from "rxjs/operators";
 import { Router } from "@angular/router";
 import { UserService } from "./user.service";

@@ -5,7 +5,7 @@ import {
   Resolve,
   RouterStateSnapshot,
 } from "@angular/router";
-import { Product } from "./product.model";
+import { Product } from "../models/product.model";
 import { Observable } from "rxjs";
 import { ProductService } from "./product.service";
 import { tap } from "rxjs/operators";

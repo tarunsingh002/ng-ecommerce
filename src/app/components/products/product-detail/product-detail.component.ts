@@ -1,11 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
-import { Product } from "../product.model";
-import { ProductService } from "../product.service";
-import { AuthService } from "../auth/auth.service";
+import { Product } from "../../../models/product.model";
+import { ProductService } from "../../../services/product.service";
+import { AuthService } from "../../../services/auth-services/auth.service";
 import { Subscription } from "rxjs";
 import { NgForm } from "@angular/forms";
-import { CartPageService } from "../cart-page/cart-page.service";
+import { CartPageService } from "../../buying/cart-page/cart-page.service";
 
 @Component({
   selector: "app-product-detail",

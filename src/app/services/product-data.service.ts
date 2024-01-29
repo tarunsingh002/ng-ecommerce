@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Product } from "./product.model";
+import { Product } from "../models/product.model";
 import { map, tap } from "rxjs/operators";
 import { ProductService } from "./product.service";
 

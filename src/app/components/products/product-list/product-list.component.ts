@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
-import { Product } from "../product.model";
-import { ProductService } from "../product.service";
-import { ProductDataService } from "../product-data.service";
-import { AuthService } from "../auth/auth.service";
+import { Product } from "../../../models/product.model";
+import { ProductService } from "../../../services/product.service";
+import { ProductDataService } from "../../../services/product-data.service";
+import { AuthService } from "../../../services/auth-services/auth.service";
 import { Subscription } from "rxjs";
-import { CartPageService } from "../cart-page/cart-page.service";
+import { CartPageService } from "../../buying/cart-page/cart-page.service";
 import { Router } from "@angular/router";
 import { FormControl, FormGroup } from "@angular/forms";
 

@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { User } from "../auth/user.model";
+import { User } from "../../../models/user.model";
 import { ActivatedRoute } from "@angular/router";
-import { Cart } from "../cart-page/cart.model";
-import { Product } from "../product.model";
+import { Cart } from "../../../models/cart.model";
+import { Product } from "../../../models/product.model";
 
 @Component({
   selector: "app-order",

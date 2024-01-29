@@ -1,10 +1,10 @@
 import { Injectable } from "@angular/core";
 
-import { User } from "./user.model";
+import { User } from "../../models/user.model";
 import { HttpClient } from "@angular/common/http";
 import { exhaustMap, map } from "rxjs/operators";
-import { Cart } from "../cart-page/cart.model";
-import { Order } from "../order/order.model";
+import { Cart } from "../../models/cart.model";
+import { Order } from "../../models/order.model";
 
 @Injectable({
   providedIn: "root",

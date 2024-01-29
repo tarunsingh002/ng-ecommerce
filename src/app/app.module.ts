@@ -1,51 +1,29 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from "./app.component";
-import { ProductListComponent } from "./product-list/product-list.component";
-import { ProductDetailComponent } from "./product-detail/product-detail.component";
-import { ProductFormComponent } from "./product-form/product-form.component";
-import { AppRoutingModule } from "./app-routing.module";
-import { AuthComponent } from "./auth/auth.component";
-import { LoadingSpinnerComponent } from "./loading-spinner/loading-spinner.component";
-import { AuthInterceptor } from "./auth/auth.interceptor";
-import { BuyProductComponent } from "./buy-product/buy-product.component";
-import { CompleteComponent } from "./complete/complete.component";
-import { OrderComponent } from "./order/order.component";
-import { CartPageComponent } from "./cart-page/cart-page.component";
-import { AboutusComponent } from "./aboutus/aboutus.component";
-import { ContactUsComponent } from "./contact-us/contact-us.component";
-import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
-import { SearchComponent } from "./search/search.component";
+import { ProductsModule } from "./components/products/products.module";
+import { MiscellaneousModule } from "./components/miscellaneous/miscellaneous.module";
+import { BuyingModule } from "./components/buying/buying.module";
+import { AuthModule } from "./components/auth/auth.module";
+import { RouterModule } from "@angular/router";
+import { SharedModule } from "./components/shared/shared.module";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ProductListComponent,
-    ProductDetailComponent,
-    ProductFormComponent,
-    AuthComponent,
-    LoadingSpinnerComponent,
-    BuyProductComponent,
-    CompleteComponent,
-    OrderComponent,
-    CartPageComponent,
-    AboutusComponent,
-    ContactUsComponent,
-    PageNotFoundComponent,
-    SearchComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule,
-  ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    SharedModule,
+    AuthModule,
+    ProductsModule,
+    BuyingModule,
+    MiscellaneousModule,
+    RouterModule.forRoot([]),
   ],
   bootstrap: [AppComponent],
 })

@@ -5,14 +5,14 @@ import {
   ActivatedRouteSnapshot,
 } from "@angular/router";
 import { Observable, concat, of } from "rxjs";
-import { AuthService } from "../auth/auth.service";
-import { UserService } from "../auth/user.service";
-import { User } from "../auth/user.model";
+import { AuthService } from "../../../services/auth-services/auth.service";
+import { UserService } from "../../../services/auth-services/user.service";
+import { User } from "../../../models/user.model";
 import { exhaustMap, tap } from "rxjs/operators";
-import { LoadingService } from "../loading.service";
-import { ProductDataService } from "../product-data.service";
+import { LoadingService } from "../../../services/loading.service";
+import { ProductDataService } from "../../../services/product-data.service";
 import { OrderService } from "./order.service";
-import { Cart } from "../cart-page/cart.model";
+import { Cart } from "../../../models/cart.model";
 import { CartPageService } from "../cart-page/cart-page.service";
 
 @Injectable({

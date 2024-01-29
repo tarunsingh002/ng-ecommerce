@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup } from "@angular/forms";
-import { ProductService } from "../product.service";
-import { Product } from "../product.model";
+import { ProductService } from "../../../services/product.service";
+import { Product } from "../../../models/product.model";
 
 @Component({
   selector: "app-search",
