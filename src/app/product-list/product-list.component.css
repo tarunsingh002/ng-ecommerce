@@ -1,0 +1,17 @@
+img {
+  height: 300px;
+  object-fit: cover;
+  /* object-position: center top; */
+}
+
+@media (max-width: 768px) {
+  img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  img {
+    height: 80vw;
+  }
+}
