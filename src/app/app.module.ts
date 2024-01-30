@@ -4,7 +4,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from "./app.component";
 
-import { RouterModule, Routes } from "@angular/router";
+import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 import { SharedModule } from "./components/shared/shared.module";
 import { AuthInterceptor } from "./services/auth-services/auth.interceptor";
 
@@ -48,7 +48,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
     SharedModule,
   ],
   providers: [
