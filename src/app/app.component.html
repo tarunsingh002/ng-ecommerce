@@ -2,7 +2,7 @@
     <div class="bg-secondary nav nav-tabs">
         <a class="nav-item nav-link" routerLinkActive="active" routerLink="/products"
             [routerLinkActiveOptions]="{exact: true}">Home</a>
-        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/aboutus">About</a>
+        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/miscellaneous/aboutus">About</a>
         <a class="nav-item nav-link" routerLinkActive="active" *ngIf="!webmaster && auth"
             routerLink="/buying/orders">Orders</a>
         <a class="nav-item nav-link" routerLinkActive="active" *ngIf="!webmaster && auth"
@@ -25,5 +25,5 @@
 
 <footer class="bg-secondary border-top d-flex flex-column justify-content-center align-items-center">
     <div>Ecommerce Project &copy; 2024</div>
-    <a routerLink="/contactus">Contact Us</a>
+    <a routerLink="/miscellaneous/contactus">Contact Us</a>
 </footer>

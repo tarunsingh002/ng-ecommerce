@@ -22,8 +22,5 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forChild(routes),
   ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
-  ],
 })
 export class AuthModule {}

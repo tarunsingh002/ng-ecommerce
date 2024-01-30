@@ -1,12 +1,12 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { HttpClientModule } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from "./app.component";
 
-import { MiscellaneousModule } from "./components/miscellaneous/miscellaneous.module";
 import { RouterModule, Routes } from "@angular/router";
 import { SharedModule } from "./components/shared/shared.module";
+import { AuthInterceptor } from "./services/auth-services/auth.interceptor";
 
 const routes: Routes = [
   { path: "", redirectTo: "/products", pathMatch: "full" },
@@ -27,6 +27,20 @@ const routes: Routes = [
     loadChildren: () =>
       import("./components/buying/buying.module").then((m) => m.BuyingModule),
   },
+  {
+    path: "miscellaneous",
+    loadChildren: () =>
+      import("./components/miscellaneous/miscellaneous.module").then(
+        (m) => m.MiscellaneousModule
+      ),
+  },
+  {
+    path: "**",
+    loadChildren: () =>
+      import("./components/page-not-found/page-not-found.module").then(
+        (m) => m.PageNotFoundModule
+      ),
+  },
 ];
 
 @NgModule({
@@ -36,7 +50,9 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes),
     SharedModule,
-    // MiscellaneousModule,
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })
