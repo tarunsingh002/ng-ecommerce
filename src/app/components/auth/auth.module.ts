@@ -9,7 +9,7 @@ import { AuthInterceptor } from "src/app/services/auth-services/auth.interceptor
 
 const routes: Routes = [
   {
-    path: "auth",
+    path: "",
     component: AuthComponent,
   },
 ];

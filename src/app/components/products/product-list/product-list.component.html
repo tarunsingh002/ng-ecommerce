@@ -12,13 +12,13 @@
                     <h6 class="card-subtitle text-center">{{"Price: $"+product.price}}</h6>
                 </div>
                 <div class="card-body">
-                    <button class="btn btn-block btn-info mx-2 my-2" [routerLink]="['/product',i]">Details</button>
+                    <button class="btn btn-block btn-info mx-2 my-2" [routerLink]="['/products',i]">Details</button>
                     <button class="btn btn-block btn-primary mx-2 my-2" *ngIf="!webmaster && auth"
                         (click)="addToCart(product)">Add to Cart</button>
                     <button class="btn btn-block btn-danger mx-2 my-2" *ngIf="webmaster"
                         (click)="onDelete(i)">Delete</button>
                     <button class="btn btn-block btn-warning mx-2 my-2" *ngIf="webmaster"
-                        [routerLink]="['/product',i,'edit']">Edit</button>
+                        [routerLink]="['/products',i,'edit']">Edit</button>
                 </div>
             </div>
         </div>

@@ -75,7 +75,7 @@ export class BuyProductComponent implements OnInit, OnDestroy {
       this.cservice.cartChanged.next(null);
       this.cservice.cart = [];
       localStorage.removeItem("cart");
-      this.router.navigate(["complete"]);
+      this.router.navigate(["/buying/complete"]);
     });
   }
 }

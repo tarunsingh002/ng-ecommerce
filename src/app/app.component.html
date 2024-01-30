@@ -1,11 +1,14 @@
 <header class="mb-4">
     <div class="bg-secondary nav nav-tabs">
-        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/products">Home</a>
+        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/products"
+            [routerLinkActiveOptions]="{exact: true}">Home</a>
         <a class="nav-item nav-link" routerLinkActive="active" routerLink="/aboutus">About</a>
         <a class="nav-item nav-link" routerLinkActive="active" *ngIf="!webmaster && auth"
-            routerLink="/orders">Orders</a>
-        <a class="nav-item nav-link" routerLinkActive="active" *ngIf="!webmaster && auth" routerLink="/cart">Cart</a>
-        <a class="nav-item nav-link" routerLinkActive="active" *ngIf="webmaster" routerLink="/create">Create</a>
+            routerLink="/buying/orders">Orders</a>
+        <a class="nav-item nav-link" routerLinkActive="active" *ngIf="!webmaster && auth"
+            routerLink="/buying/cart">Cart</a>
+        <a class="nav-item nav-link" routerLinkActive="active" *ngIf="webmaster"
+            routerLink="/products/create">Create</a>
 
         <div class="auth ml-auto ">
             <button class="btn btn-primary" (click)="onLogin()" *ngIf="!auth && !loadedAuthPage">Login</button>

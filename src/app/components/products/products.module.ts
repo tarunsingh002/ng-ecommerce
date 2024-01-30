@@ -11,9 +11,8 @@ import { IsWebmasterGuard } from "src/app/services/auth-services/is-webmaster.gu
 import { AuthGuard } from "src/app/services/auth-services/auth.guard";
 
 const appRoutes: Routes = [
-  { path: "", redirectTo: "/products", pathMatch: "full" },
   {
-    path: "products",
+    path: "",
     component: ProductListComponent,
     resolve: [ProductsResolverService],
   },
@@ -23,12 +22,12 @@ const appRoutes: Routes = [
     canActivate: [AuthGuard, IsWebmasterGuard],
   },
   {
-    path: "product/:id",
+    path: ":id",
     component: ProductDetailComponent,
     resolve: [ProductsResolverService],
   },
   {
-    path: "product/:id/edit",
+    path: ":id/edit",
     component: ProductFormComponent,
     resolve: [ProductsResolverService],
     canActivate: [AuthGuard, IsWebmasterGuard],

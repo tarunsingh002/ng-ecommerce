@@ -51,6 +51,6 @@ export class ProductDetailComponent implements OnInit {
     }
     let quantity = f.value.quantity;
     this.cservice.addToCart(this.product.id, quantity);
-    this.router.navigate(["/cart"]);
+    this.router.navigate(["/buying/cart"]);
   }
 }
