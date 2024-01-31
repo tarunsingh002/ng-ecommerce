@@ -8,6 +8,12 @@ $warning: #556d84;
 $secondary: #e9ecef;
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 
+@media (max-width: 410px) {
+  html {
+    font-size: 80%;
+  }
+}
+
 body {
   background-color: $light;
 }

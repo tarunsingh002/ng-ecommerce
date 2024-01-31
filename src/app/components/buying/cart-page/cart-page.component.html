@@ -10,9 +10,9 @@
             <span>{{p.product.name}}</span>
             <span>{{"$"+p.product.price}}</span>
             <div>
-                <button (click)="subtractProduct(p)" class="btn btn-primary">-</button>
+                <button (click)="subtractProduct(p)" class="btn btn-outline-primary">-</button>
                 <span>{{" "+p.quantity+" "}}</span>
-                <button (click)="addProduct(p)" class="btn btn-primary">+</button>
+                <button (click)="addProduct(p)" class="btn btn-outline-primary">+</button>
             </div>
         </div>
         <h4 class="display-4 text-center my-5">{{"Your Cart Total: $"+cartTotal}}</h4>

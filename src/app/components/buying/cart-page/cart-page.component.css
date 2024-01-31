@@ -8,6 +8,13 @@ img {
   object-fit: cover;
 }
 
+@media (max-width: 410px) {
+  img {
+    height: 80px;
+    width: 100px;
+  }
+}
+
 .empty {
   height: 80vh;
 }
