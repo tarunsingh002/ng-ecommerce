@@ -11,6 +11,8 @@ https://ng-ecommerce-project.netlify.app/
 email: test@test.com
 password: tester
 
+The payment details of the user will be autofilled on the Checkout Page, just press the pay button to complete the purchase and look ai all the orders on the Orders Page
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
