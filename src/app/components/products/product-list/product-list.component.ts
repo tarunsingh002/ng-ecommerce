@@ -4,7 +4,7 @@ import { ProductService } from "../../../services/product.service";
 import { ProductDataService } from "../../../services/product-data.service";
 import { AuthService } from "../../../services/auth-services/auth.service";
 import { Subscription } from "rxjs";
-import { CartPageService } from "../../buying/cart-page/cart-page.service";
+import { CartPageService } from "../../../services/cart-page.service";
 import { Router } from "@angular/router";
 import { FormControl, FormGroup } from "@angular/forms";
 

@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
-import { Cart } from "../../../models/cart.model";
-import { ProductService } from "../../../services/product.service";
+import { Cart } from "../models/cart.model";
+import { ProductService } from "./product.service";
 
 @Injectable({
   providedIn: "root",
@@ -13,7 +13,9 @@ export class CartPageService {
   constructor(private pservice: ProductService) {}
 
   addToCart(id: string, q: number) {
-    this.cart.push({ id: id, quantity: q });
+    if (!this.cart.find((c) => c.id === id))
+      this.cart.push({ id: id, quantity: q });
+    else this.cart.find((c) => c.id === id).quantity++;
     this.cartChanged.next(this.cart);
     localStorage.setItem("cart", JSON.stringify(this.cart));
   }

@@ -13,7 +13,7 @@ import { LoadingService } from "../../../services/loading.service";
 import { ProductDataService } from "../../../services/product-data.service";
 import { OrderService } from "./order.service";
 import { Cart } from "../../../models/cart.model";
-import { CartPageService } from "../cart-page/cart-page.service";
+import { CartPageService } from "../../../services/cart-page.service";
 
 @Injectable({
   providedIn: "root",

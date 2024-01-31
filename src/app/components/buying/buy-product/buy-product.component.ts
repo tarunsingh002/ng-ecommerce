@@ -10,7 +10,7 @@ import { User } from "../../../models/user.model";
 import { Subscription } from "rxjs";
 import { LoadingService } from "../../../services/loading.service";
 import { Cart } from "../../../models/cart.model";
-import { CartPageService } from "../cart-page/cart-page.service";
+import { CartPageService } from "../../../services/cart-page.service";
 
 @Component({
   selector: "app-buy-product",

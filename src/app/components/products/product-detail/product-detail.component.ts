@@ -5,7 +5,7 @@ import { ProductService } from "../../../services/product.service";
 import { AuthService } from "../../../services/auth-services/auth.service";
 import { Subscription } from "rxjs";
 import { NgForm } from "@angular/forms";
-import { CartPageService } from "../../buying/cart-page/cart-page.service";
+import { CartPageService } from "../../../services/cart-page.service";
 
 @Component({
   selector: "app-product-detail",

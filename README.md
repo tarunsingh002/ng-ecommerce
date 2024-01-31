@@ -4,11 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Project Working Link
 
-https://ng-ecommerce-electronics.web.app/
+https://ng-ecommerce-project.netlify.app/
 
-## Username and Password to test out various features:
+## User Email and Password to test out various features:
 
-username: test@test.com
+email: test@test.com
 password: tester
 
 ## Development server
