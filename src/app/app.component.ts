@@ -3,6 +3,8 @@ import { LoadingService } from "./services/loading.service";
 import { Subscription } from "rxjs";
 import { AuthService } from "./services/auth-services/auth.service";
 import { NavigationEnd, Router } from "@angular/router";
+import { CartPageService } from "./services/cart-page.service";
+import { Cart } from "./models/cart.model";
 
 @Component({
   selector: "app-root",
@@ -17,11 +19,14 @@ export class AppComponent implements OnInit, OnDestroy {
   userSub: Subscription;
   loadedAuthPage: boolean;
   routerSub: Subscription;
+  cSub: Subscription;
+  items: number;
 
   constructor(
     private l: LoadingService,
     private authS: AuthService,
-    private router: Router
+    private router: Router,
+    private cservice: CartPageService
   ) {}
 
   ngOnInit() {
@@ -39,6 +44,12 @@ export class AppComponent implements OnInit, OnDestroy {
     this.routerSub = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd)
         this.loadedAuthPage = this.router.url === "/auth" ? true : false;
+    });
+
+    this.cSub = this.cservice.cartChanged.subscribe((c) => {
+      if (!c) this.items = 0;
+      else
+        this.items = c.reduce((t: number, i: Cart) => (t = t + i.quantity), 0);
     });
   }
 
