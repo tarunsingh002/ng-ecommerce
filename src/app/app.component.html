@@ -10,7 +10,7 @@
         <a class="nav-item nav-link" routerLinkActive="active" *ngIf="webmaster"
             routerLink="/products/create">Create</a>
 
-        <div class="auth ml-auto ">
+        <div class="auth ml-auto mr-2">
             <button class="btn btn-primary" (click)="onLogin()" *ngIf="!auth && !loadedAuthPage">Login</button>
             <button class="btn btn-danger" (click)="onLogout()" *ngIf="auth">Logout</button>
         </div>

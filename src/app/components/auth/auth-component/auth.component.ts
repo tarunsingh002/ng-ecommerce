@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import {
   AuthService,
   responseData,
@@ -12,7 +12,9 @@ import { Router } from "@angular/router";
   templateUrl: "./auth.component.html",
   styleUrls: ["./auth.component.css"],
 })
-export class AuthComponent {
+export class AuthComponent implements OnInit {
+  _email: string;
+  _password: string;
   signUpMode = false;
   errorMessage: string = null;
   isLoading = false;
@@ -21,6 +23,11 @@ export class AuthComponent {
 
     private router: Router
   ) {}
+
+  ngOnInit(): void {
+    this._email = "test@test.com";
+    this._password = "tester";
+  }
 
   formSubmitted(form: NgForm) {
     this.isLoading = true;
